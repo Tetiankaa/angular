@@ -1,0 +1,20 @@
+Angular is a platform and framework for building single-page applications using HTML and TypeScript.
+
+HttpClientModule - provides the HTTP client capabilities for making requests.
+HttpClient - a service that enables making HTTP requests.
+
+providers - are used to define and configure services, dependencies, and other objects that can be injected throughout the application.
+
+Injectable - marks a class as available to be injected with dependencies.
+
+Observable - represents a stream of values over time.
+
+OnInit interface is a recommended practice when we want to perform actions during the initialization phase of a component, such as fetching initial data, setting up subscriptions, or performing other setup tasks.
+
+subscribe() method calls the observable's function that produces and emits data.
+
+@Input - indicates that this property can receive values from its parent component
+@Output - indicates that this property can emit events to the parent component
+
+*ngFor - is used for iterating over a collection
+
