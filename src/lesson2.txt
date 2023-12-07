@@ -1,0 +1,9 @@
+<router-outlet> element, which is a placeholder where the router will dynamically insert the component associated with the current route.
+
+template property allows to define the structure of the component's view directly within the component file.
+
+Router service is used for navigation.
+ActivatedRoute service is used to get information about the current route.
+    relativeTo -  indicates that the navigation is relative to the current route.
+
+getCurrentNavigation - returns the current Navigation object when the router is navigating, and null when idle
