@@ -1,0 +1,6 @@
+FormGroup is a class that represents a group of form controls ( input field, checkbox etc.)
+
+formBuilder is a service that provides way to create instance of FormGroup
+
+BehaviorSubject stores the latest value emitted and, whenever a new observer subscribes, it immediately sends the current value to the observer.
+asObservable - is used to convert a Subject or a BehaviorSubject into an observable.
