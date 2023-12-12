@@ -1,0 +1,5 @@
+Angular modules define an application.
+The module is a container for the different parts of an application.
+
+Modules can be lazy-loaded, meaning that they are loaded only when needed.
+loadChildren - is a property that enable lazy loading of modules.
