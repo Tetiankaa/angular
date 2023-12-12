@@ -6,6 +6,10 @@ const urls = {
   users:{
     base:users,
     byId:(id:number):string=>`${users}/${id}`
+  },
+  posts:{
+    base:`${baseURL}/posts`,
+    byPostId:(id:number):string=>`${baseURL}/posts/${id}`
   }
 }
 
