@@ -1,0 +1,3 @@
+resolvers - used to provide data to the route element before it renders.
+
+inject function is used to inject dependencies in application
