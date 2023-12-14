@@ -1,0 +1,14 @@
+.links{
+  display: flex;
+
+}
+.links a{
+  text-decoration: none;
+  padding: 0 5px;
+  font-size: 23px;
+  color: snow;
+}
+
+.tool-bar{
+  justify-content: space-between;
+}
