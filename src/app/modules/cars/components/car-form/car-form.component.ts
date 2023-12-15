@@ -19,7 +19,7 @@ export class CarFormComponent implements OnInit{
     this._initForm();
 
     this.carService.getCarForUpdate().subscribe(value => {
-      this.carForUpdate = value;
+      this.carForUpdate = value
 
       if (value){
         const {brand, price,year} = value;
@@ -37,27 +37,19 @@ export class CarFormComponent implements OnInit{
           Validators.pattern(/^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$/)
         ]],
         price:['',
-          Validators.required,
+          [Validators.required,
           Validators.min(0),
           Validators.max(1000000),
-          Validators.pattern(/^\d*$/),
+          Validators.pattern(/^\d*$/)]
         ],
         year:['',
-          Validators.required,
+         [ Validators.required,
           Validators.min(1990),
           Validators.max(new Date().getFullYear()),
-          Validators.pattern(/^\d*$/),
-        ],
+          Validators.pattern(/^\d*$/)]
+        ]
       }
     )
-  }
-
-  update():void{
-    this.carService.updateById(this.carForUpdate.id, this.form.value).subscribe(()=>{
-      this.carService.setTrigger();
-      this.carService.setCarForUpdate(null);
-      this.form.reset();
-    })
   }
 
   create():void{
@@ -66,5 +58,13 @@ export class CarFormComponent implements OnInit{
       this.form.reset();
     })
   }
+  update():void{
+    this.carService.updateById(this.carForUpdate.id, this.form.value).subscribe(()=>{
+      this.carService.setTrigger();
+      this.carService.setCarForUpdate(null);
+      this.form.reset();
+    })
+  }
+
 
 }

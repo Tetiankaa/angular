@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable, tap} from "rxjs";
+import {BehaviorSubject, Observable, tap} from "rxjs";
 
 import {IAuth, ITokens, IUser} from "../interfaces";
 import {urls} from "../constants";
@@ -12,6 +12,7 @@ export class AuthService {
 
  private readonly _accessTokenKey = 'access';
  private readonly _refreshTokenKey = 'refresh';
+ myDataSubject = new BehaviorSubject<IUser>(null);
 
   constructor(private httpClient:HttpClient) { }
 
@@ -50,5 +51,12 @@ export class AuthService {
     localStorage.removeItem(this._refreshTokenKey);
   }
 
+  getMyDataSubject():Observable<IUser>{
+    return this.myDataSubject.asObservable();
+  }
+
+  setMyDataSubject(data:IUser):void{
+    this.myDataSubject.next(data)
+  }
 
 }

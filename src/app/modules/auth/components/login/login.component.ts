@@ -29,10 +29,14 @@ export class LoginComponent implements OnInit {
   login(): void {
 this.authService.login(this.form.value).subscribe({
   next:()=>{
-    this.router.navigate(['cars'])
+    this.router.navigate(['cars']);
+
+    this.authService.getMyData().subscribe(value => {
+      this.authService.setMyDataSubject(value)
+    })
   },
-  error:(e)=>{
-    console.log(e);
+  error:(err)=>{
+    console.log('!!!!!' + err);
     this.error = true;
   },
   complete:()=>{
