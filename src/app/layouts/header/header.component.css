@@ -1,0 +1,17 @@
+
+.link a,.links>a{
+  text-decoration: none;
+  font-size: 21px;
+  color:snow;
+  padding:0 5px;
+}
+.links a:hover{
+  text-decoration: underline;
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+}
+.space_btw{
+  justify-content: space-between;
+}

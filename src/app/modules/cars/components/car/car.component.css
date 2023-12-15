@@ -1,0 +1,9 @@
+mat-grid-tile{
+  background-color: lightblue;
+}
+.column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

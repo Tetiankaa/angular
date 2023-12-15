@@ -1,0 +1,12 @@
+form{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mg{
+  margin: 10px;
+}
+button{
+  width: 100px;
+  height: 40px;
+}
