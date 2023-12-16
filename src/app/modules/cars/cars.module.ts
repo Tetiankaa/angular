@@ -6,6 +6,8 @@ import { CarPageComponent } from './pages/car-page/car-page.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { CarComponent } from './components/car/car.component';
 import { CarFormComponent } from './components/car-form/car-form.component';
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { CarFormComponent } from './components/car-form/car-form.component';
   ],
   imports: [
     CommonModule,
-    CarsRoutingModule
+    CarsRoutingModule,
+    MatExpansionModule,
+    MatPaginatorModule
   ]
 })
 export class CarsModule { }

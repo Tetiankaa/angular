@@ -11,8 +11,8 @@ export class CarService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getAll():Observable<IPagination<ICar>>{
-    return this.httpClient.get<IPagination<ICar>>(urls.cars.base)
+  getAll(page=1):Observable<IPagination<ICar>>{
+    return this.httpClient.get<IPagination<ICar>>(urls.cars.base,{params:{page}})
   }
 
   create(data:ICar):Observable<ICar>{

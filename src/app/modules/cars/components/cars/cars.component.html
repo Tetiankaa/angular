@@ -1,1 +1,15 @@
-<app-car *ngFor="let car of cars" [car]="car"></app-car>
+<mat-accordion>
+  <mat-expansion-panel hideToggle *ngFor="let car of cars">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+       {{car.brand}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      <div>id {{car.id}}</div>
+      <div>brand {{car.brand}}</div>
+      <div>price {{car.price}}</div>
+      <div>year {{car.year}}</div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
