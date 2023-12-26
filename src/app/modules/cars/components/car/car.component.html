@@ -1,0 +1,10 @@
+<div>
+  <div>id: {{car.id}}</div>
+  <div>brand: {{car.brand}}</div>
+  <div>price: {{car.price}}</div>
+  <div>year: {{car.year}}</div>
+  <img [src]="getImageUrl()" alt="{{car.brand}}" (click)="handleImageClick()" style="width: 200px;">
+  <input type="file" accept="image/jpeg, image/png" #fileInput (change)="addPhoto(fileInput)" style="display: none;" [disabled]="!!car.photo">
+  <button (click)="updateCar()">Update</button>
+  <button (click)="deleteCar()">Delete</button>
+</div>

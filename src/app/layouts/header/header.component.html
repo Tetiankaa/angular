@@ -1,0 +1,12 @@
+<div class="main">
+  <div *ngIf="username">{{username}}
+    <button (click)="logOut()">Log Out</button>
+  </div>
+
+  <div *ngIf="!username">
+    <a routerLink="/auth/login">Login</a>
+    <a routerLink="/auth/register">Register</a>
+  </div>
+
+</div>
+<hr>

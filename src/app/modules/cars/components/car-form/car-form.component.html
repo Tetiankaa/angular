@@ -1,0 +1,6 @@
+<form [formGroup]="form">
+  <input type="text" placeholder="Brand" formControlName="brand">
+  <input type="text" placeholder="Price" formControlName="price">
+  <input type="text" placeholder="Year" formControlName="year">
+  <button (click)="carForUpdate ? updateCar() : createCar()">{{carForUpdate ? 'update' : 'create'}}</button>
+</form>

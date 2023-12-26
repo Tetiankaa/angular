@@ -1,0 +1,4 @@
+<app-car-form></app-car-form>
+<app-car *ngFor="let car of cars" [car]="car"></app-car>
+<button (click)="prev()" [disabled]="currentPage===1">prev</button>
+<button (click)="next()" [disabled]="currentPage === totalPages">next</button>
