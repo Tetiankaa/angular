@@ -1,12 +1,1 @@
-environments - provide a way to define different configuration values for development, production, and potentially other environments
-  - environment.development.ts - contains configuration settings for the development environment.
-  - environment.ts - contains configuration settings optimized for production
-
-events property of the Angular Router emits events related to navigation.(NavigationStart, NavigationEnd)
-
-pipe method is used to combine multiple operators into a single pipeline
-tap - can perform side effects with observed data but does not modify the stream in any way.
-
-clone method is used to create a new HttpRequest object with some modifications, while leaving the original request unchanged.
-
-switchMap - is used to switch to a new observable based on the emitted value from the inner observable.
+ViewChild is a decorator that is used to get a reference to a child component or an element within a parent component.
