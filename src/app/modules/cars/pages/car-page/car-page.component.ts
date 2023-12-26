@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CarService} from "../../../../services";
 import {ICar} from "../../../../interfaces";
 import {PageEvent} from "@angular/material/paginator";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-car-page',
@@ -15,17 +15,24 @@ export class CarPageComponent implements OnInit{
   pageIndex:number
   pageSize = 10
 
-  constructor(private carService:CarService, private router:Router) {
+  constructor(private carService:CarService, private router:Router, private activatedRoute:ActivatedRoute) {
   }
   ngOnInit(): void {
-    this.carService.getAll().subscribe(value => {
+this.carService.getTrigger().subscribe(()=>{
+  this.activatedRoute.queryParams.subscribe(({page})=>{
+    this.carService.getAll(page).subscribe(value => {
       this.cars = value.items;
       this.length = value.total_items
     })
+  })
+  this.router.navigate([], {queryParams:{page:1}})
+})
+
+
 
   }
 
   handlePageEvent(event: PageEvent) {
-    this.router.navigate([],{queryParams:{page:event.pageIndex}})
+    this.router.navigate([],{queryParams:{page:event.pageIndex+1}})
   }
 }

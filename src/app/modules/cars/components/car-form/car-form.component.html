@@ -1,1 +1,22 @@
-<p>car-form works!</p>
+<form [formGroup]="form">
+
+    <mat-form-field>
+      <mat-label>Brand</mat-label>
+      <input matInput formControlName="brand" >
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput formControlName="price">
+    </mat-form-field>
+
+
+    <mat-form-field >
+      <mat-label>Year</mat-label>
+      <input matInput formControlName="year">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="carForUpdate ? update() : save()">{{carForUpdate ? 'Update' : 'Create'}}</button>
+
+</form>

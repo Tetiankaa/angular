@@ -5,11 +5,6 @@
        {{car.brand}}
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <div>
-      <div>id {{car.id}}</div>
-      <div>brand {{car.brand}}</div>
-      <div>price {{car.price}}</div>
-      <div>year {{car.year}}</div>
-    </div>
+<app-car [car]="car"></app-car>
   </mat-expansion-panel>
 </mat-accordion>
